@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="home"><a href="#">Home</a></li>
+            <li class="services"><a href="#">Services</a></li>
+            <li class="about"><a href="#">About us</a></li>
+            <li class="contact"><a href="#">Contact us</a></li>
+        <span class="slider"></span>
+        </ul>
+    </div>
+</body>
+<script>
+    let slider = document.querySelector(".slider");
+    let li = document.querySelectorAll(".navigation ul li");
+    let index_value = 0;
+    li.forEach((item,index) => {
+        item.onclick = function(){
+            slider.style.width = item.clientWidth + "px";
+            console.log(index);
+            index_value =index;
+            get_left_position();
+        }
+    });
+    
+    
+
+</script>
+</html>
